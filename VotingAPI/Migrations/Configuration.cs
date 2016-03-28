@@ -44,6 +44,18 @@ namespace VotingAPI.Migrations
                 context.Voters.AddRange(voters);
             }
 
+            if (!context.Candidates.Any())
+            {
+                var candidates = Builder<Candidate>.CreateListOfSize(10)
+                    .All()
+                    .With(x => x.Party = Faker.EnumFaker.SelectFrom<Party>().ToString())
+                    .With(x => x.Name = Faker.NameFaker.Name())
+                    .With(x => x.Id = Faker.NumberFaker.Number())
+                    .Build();
+
+                context.Candidates.AddRange(candidates);
+            }
+
         }
     }
 }

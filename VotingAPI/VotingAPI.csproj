@@ -204,6 +204,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\VotersController.cs" />
+    <Compile Include="Controllers\VotesController.cs" />
     <Compile Include="Migrations\201603281858549_VoterTable.cs" />
     <Compile Include="Migrations\201603281858549_VoterTable.Designer.cs">
       <DependentUpon>201603281858549_VoterTable.cs</DependentUpon>
@@ -212,8 +213,13 @@
     <Compile Include="Migrations\201603282046268_candidatetable.Designer.cs">
       <DependentUpon>201603282046268_candidatetable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603282052558_votestable.cs" />
+    <Compile Include="Migrations\201603282052558_votestable.Designer.cs">
+      <DependentUpon>201603282052558_votestable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Candidate.cs" />
+    <Compile Include="Models\Vote.cs" />
     <Compile Include="Models\Voter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603282046268_candidatetable.resx">
       <DependentUpon>201603282046268_candidatetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603282052558_votestable.resx">
+      <DependentUpon>201603282052558_votestable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
