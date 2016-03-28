@@ -49,6 +49,8 @@ namespace VotingAPI.Migrations
                 var candidates = Builder<Candidate>.CreateListOfSize(10)
                     .All()
                     .With(x => x.Party = Faker.EnumFaker.SelectFrom<Party>().ToString())
+                    .With(x => x.HomeTown = Faker.EnumFaker.SelectFrom<HomeTown>().ToString())
+                    .With(x => x.District = Faker.EnumFaker.SelectFrom<District>().ToString())
                     .With(x => x.Name = Faker.NameFaker.Name())
                     .With(x => x.Id = Faker.NumberFaker.Number())
                     .Build();

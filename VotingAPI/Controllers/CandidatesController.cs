@@ -115,4 +115,19 @@ namespace VotingAPI.Controllers
             return db.Candidates.Count(e => e.Id == id) > 0;
         }
     }
+    public enum HomeTown
+    {
+        Helena,
+        Conway,
+        Hope,
+        Memphis
+
+    }
+
+    public enum District
+    {
+        Faulkner,
+        Pulaski,
+        Benton
+    }
 }
