@@ -18,4 +18,6 @@ public class VotingAPIContext : DbContext
     }
 
     public System.Data.Entity.DbSet<VotingAPI.Models.Voter> Voters { get; set; }
+
+    public System.Data.Entity.DbSet<VotingAPI.Models.Candidate> Candidates { get; set; }
 }
